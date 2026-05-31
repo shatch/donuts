@@ -1,0 +1,29 @@
+{
+  "Comment": "Alias donuts.hatch.org -> CloudFront",
+  "Changes": [
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name": "donuts.hatch.org.",
+        "Type": "A",
+        "AliasTarget": {
+          "HostedZoneId": "Z2FDTNDATAQYW2",
+          "DNSName": "CF_DOMAIN.",
+          "EvaluateTargetHealth": false
+        }
+      }
+    },
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name": "donuts.hatch.org.",
+        "Type": "AAAA",
+        "AliasTarget": {
+          "HostedZoneId": "Z2FDTNDATAQYW2",
+          "DNSName": "CF_DOMAIN.",
+          "EvaluateTargetHealth": false
+        }
+      }
+    }
+  ]
+}

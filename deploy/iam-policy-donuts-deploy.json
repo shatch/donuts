@@ -1,0 +1,27 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "S3Bucket",
+      "Effect": "Allow",
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::donuts-hatch-org",
+        "arn:aws:s3:::donuts-hatch-org/*"
+      ]
+    },
+    {
+      "Sid": "CdnDnsCert",
+      "Effect": "Allow",
+      "Action": [
+        "cloudfront:*",
+        "acm:*",
+        "route53:ListHostedZones*",
+        "route53:ListResourceRecordSets",
+        "route53:ChangeResourceRecordSets",
+        "route53:GetChange"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
