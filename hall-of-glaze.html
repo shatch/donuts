@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hall of Glaze 🏆 — Legendary Donuts & Drool Champions</title>
+  <meta name="description" content="The eternal leaderboard of legendary donuts and the drool champions who love them. Find your rank in The Holy Order of the Donut." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:ital,wght@0,400;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <img class="donut-mark" src="assets/favicon.svg" alt="" aria-hidden="true" />
+        Holy Order of the Donut
+      </a>
+      <div class="nav-links">
+        <a href="quiz.html">Quiz</a>
+        <a href="codex.html">Codex</a>
+        <a href="scripture.html">Scripture</a>
+        <a href="hall-of-glaze.html">Hall of Glaze</a>
+        <span class="drool-meter" title="Collective drool produced by pilgrims like you.">
+          <span class="drop" aria-hidden="true">💧</span>
+          Collective Drool: <span data-drool-count>0</span> mL
+        </span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap" style="padding-bottom:0.5rem;">
+      <span class="kicker">Enshrined for all eternity</span>
+      <h1>The Hall of Glaze</h1>
+      <p class="lede">Here we honor the donuts of legend and the mortals who drooled hardest in their name. Click around the site to raise your drool — and your rank.</p>
+    </section>
+
+    <!-- Your rank -->
+    <section class="wrap">
+      <div class="card rank-badge">
+        <div class="seal" aria-hidden="true">Drool<br>Rank</div>
+        <h2 style="margin:0.6rem 0 0.2rem;" id="rank-title">Calculating your worth…</h2>
+        <p class="muted" id="rank-desc">Measuring the contents of your drool ledger.</p>
+        <p style="margin:0;font-weight:900;color:var(--choco);">Your drool: <span data-drool-count>0</span> mL</p>
+      </div>
+    </section>
+
+    <!-- Legendary donuts -->
+    <section class="section wrap">
+      <h2>🏆 Legendary Donuts of Antiquity</h2>
+      <p class="sub">Donuts so magnificent they transcended breakfast and entered myth.</p>
+      <ol class="leaderboard">
+        <li><span class="rank">①</span><span class="who">The First Glaze</span><span class="score">Eaten by a god, allegedly</span></li>
+        <li><span class="rank">②</span><span class="who">The Dozen That Came Home As Eleven</span><span class="score">Case unsolved</span></li>
+        <li><span class="rank">③</span><span class="who">Sir Boston of Cream</span><span class="score">Knighted mid-bite</span></li>
+        <li><span class="rank">④</span><span class="who">The Maple Bacon Incident</span><span class="score">Still being investigated</span></li>
+        <li><span class="rank">⑤</span><span class="who">The Last One Nobody Claimed</span><span class="score">A modern tragedy</span></li>
+      </ol>
+    </section>
+
+    <!-- Drool champions -->
+    <section class="section wrap">
+      <h2>💧 Drool Champions, All-Time</h2>
+      <p class="sub">The pilgrims whose devotion (and salivary output) set the standard.</p>
+      <ol class="leaderboard" id="champions">
+        <li><span class="rank">①</span><span class="who">Brother Glazed</span><span class="score">∞ mL</span></li>
+        <li><span class="rank">②</span><span class="who">The Anonymous Box-Emptier</span><span class="score">48,200 mL</span></li>
+        <li><span class="rank">③</span><span class="who">Sister Sprinkle</span><span class="score">31,540 mL</span></li>
+        <li><span class="rank">④</span><span class="who">The 3AM Fridge Visitor</span><span class="score">22,015 mL</span></li>
+        <li><span class="rank">⑤</span><span class="who">"I'll Just Have Half" (lapsed)</span><span class="score">9,870 mL</span></li>
+        <!-- visitor row injected here -->
+      </ol>
+      <p class="center" style="margin-top:1.5rem;">
+        <a class="btn" href="quiz.html" data-drool="8">🔮 Earn glory — take the Quiz</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img class="donut-mark" src="assets/favicon.svg" alt="" aria-hidden="true" />
+    <p style="font-family:var(--font-display);font-size:1.3rem;margin:0.4rem 0;">Mmm… legends.</p>
+    <p><a href="index.html">Home</a> · <a href="quiz.html">Quiz</a> · <a href="codex.html">Codex</a> · <a href="scripture.html">Scripture</a></p>
+    <p class="fine">All champions are fictional and all drool volumes are wildly exaggerated for dramatic effect. Your personal drool tally lives only in your browser, where it judges you privately.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    /* Compute the visitor's drool rank and enshrine them. */
+    (function () {
+      var TITLES = [
+        { min: 0,    title: "Unanointed Novice",        desc: "You have not yet drooled. The Order watches with cautious hope." },
+        { min: 10,   title: "Apprentice Droolist",       desc: "A trickle of devotion. Keep clicking, pilgrim." },
+        { min: 30,   title: "Sprinkle Initiate",         desc: "Promising salivation. Brother Glazed has noticed you." },
+        { min: 60,   title: "Glaze Acolyte",             desc: "Your reverence is showing. So is the drool." },
+        { min: 100,  title: "Keeper of the Box",         desc: "Trusted with the last donut. A heavy honor." },
+        { min: 175,  title: "High Holer",                desc: "Devotion bordering on the concerning. We respect it." },
+        { min: 300,  title: "Saint of the Sacred Ring",  desc: "You have transcended snacking. You ARE the snack now." }
+      ];
+      function rankFor(v) {
+        var r = TITLES[0];
+        for (var i = 0; i < TITLES.length; i++) if (v >= TITLES[i].min) r = TITLES[i];
+        return r;
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        var v = (window.HOOD && window.HOOD.getDrool) ? window.HOOD.getDrool() : 0;
+        var r = rankFor(v);
+        var t = document.getElementById("rank-title");
+        var d = document.getElementById("rank-desc");
+        if (t) t.textContent = "You rank: " + r.title;
+        if (d) d.textContent = r.desc;
+
+        // Enshrine the visitor in the champions list.
+        var list = document.getElementById("champions");
+        if (list) {
+          var li = document.createElement("li");
+          li.className = "you";
+          li.innerHTML = '<span class="rank">★</span><span class="who">You (' + r.title + ')</span><span class="score">' + v.toLocaleString("en-US") + ' mL</span>';
+          list.appendChild(li);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

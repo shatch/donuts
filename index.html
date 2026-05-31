@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Holy Order of the Donut 🍩 — In Glaze We Trust</title>
+  <meta name="description" content="The official shrine of The Holy Order of the Donut. Take the sacred quiz, study the Codex, read the Commandments. Mmm… donuts." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:ital,wght@0,400;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <img class="donut-mark" src="assets/favicon.svg" alt="" aria-hidden="true" />
+        Holy Order of the Donut
+      </a>
+      <div class="nav-links">
+        <a href="quiz.html">Quiz</a>
+        <a href="codex.html">Codex</a>
+        <a href="scripture.html">Scripture</a>
+        <a href="hall-of-glaze.html">Hall of Glaze</a>
+        <span class="drool-meter" title="Collective drool produced by pilgrims like you.">
+          <span class="drop" aria-hidden="true">💧</span>
+          Collective Drool: <span data-drool-count>0</span> mL
+        </span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero wrap">
+      <span class="kicker">Est. the moment dough first met hot oil</span>
+
+      <!-- Hero donut with drool drips -->
+      <svg class="hero-donut" viewBox="0 0 320 320" role="img" aria-label="A glazed pink donut, drooling slightly. As one does.">
+        <defs>
+          <radialGradient id="dough" cx="40%" cy="35%" r="75%">
+            <stop offset="0%" stop-color="#f8e4ba"/>
+            <stop offset="100%" stop-color="#e6c281"/>
+          </radialGradient>
+          <radialGradient id="frost" cx="42%" cy="32%" r="75%">
+            <stop offset="0%" stop-color="#ff9ccb"/>
+            <stop offset="100%" stop-color="#ff6fb5"/>
+          </radialGradient>
+        </defs>
+
+        <!-- drool drips (animated) -->
+        <g>
+          <ellipse class="drip-drop" cx="96" cy="250" rx="7" ry="11" fill="#bfeaff" opacity="0.9"/>
+          <ellipse class="drip-drop d2" cx="160" cy="262" rx="8" ry="13" fill="#bfeaff" opacity="0.9"/>
+          <ellipse class="drip-drop d3" cx="226" cy="250" rx="6" ry="10" fill="#bfeaff" opacity="0.9"/>
+        </g>
+
+        <g class="spinner">
+          <!-- dough body -->
+          <circle cx="160" cy="160" r="120" fill="url(#dough)"/>
+          <!-- frosting -->
+          <path d="M160 52a108 108 0 0 0-96 156c10-52 50-78 96-78s86 26 96 78A108 108 0 0 0 160 52z" fill="url(#frost)"/>
+          <!-- drippy frosting edge -->
+          <circle cx="160" cy="160" r="108" fill="none" stroke="#ff6fb5" stroke-width="0"/>
+          <!-- hole -->
+          <circle cx="160" cy="160" r="38" fill="#5a3825"/>
+          <circle cx="160" cy="160" r="38" fill="none" stroke="#3a2417" stroke-width="6"/>
+          <!-- sprinkles -->
+          <g stroke-width="7" stroke-linecap="round">
+            <line x1="92" y1="112" x2="102" y2="124" stroke="#ffd23f"/>
+            <line x1="128" y1="86"  x2="134" y2="100" stroke="#2ec4b6"/>
+            <line x1="186" y1="84"  x2="196" y2="96" stroke="#4cc9f0"/>
+            <line x1="222" y1="110" x2="230" y2="122" stroke="#9b5de5"/>
+            <line x1="240" y1="150" x2="252" y2="156" stroke="#ff5d5d"/>
+            <line x1="76"  y1="150" x2="88"  y2="156" stroke="#9b5de5"/>
+            <line x1="110" y1="208" x2="118" y2="220" stroke="#4cc9f0"/>
+            <line x1="206" y1="206" x2="216" y2="216" stroke="#ffd23f"/>
+            <line x1="150" y1="74"  x2="156" y2="88" stroke="#ff5d5d"/>
+          </g>
+        </g>
+      </svg>
+
+      <h1>In Glaze We Trust</h1>
+      <p class="lede">Welcome, pilgrim, to <strong>The Holy Order of the Donut</strong> — the internet's most reverent, least sensible shrine to fried, frosted, hole-bearing perfection. Abandon your diet, all ye who enter here.</p>
+
+      <p>
+        <a class="btn big" href="quiz.html" data-drool="10">🍩 Discover Which Donut You Are</a>
+      </p>
+      <p class="muted" style="margin-top:0.6rem;">Takes 90 seconds. Changes your entire self-image.</p>
+    </section>
+
+    <!-- ===== Fact ticker ===== -->
+    <section class="wrap">
+      <blockquote class="fact">
+        <span class="label">📜 Donut Fact of the Moment</span>
+        <span data-fact>Loading sacred knowledge…</span>
+      </blockquote>
+    </section>
+
+    <!-- ===== Rabbit holes ===== -->
+    <section class="section wrap">
+      <h2>Wander Deeper Into the Glaze</h2>
+      <p class="sub">Four sacred passages. Each more delicious than your better judgment.</p>
+      <div class="card-grid">
+        <a class="card rabbit-hole" href="quiz.html" data-drool="3">
+          <span class="emoji" aria-hidden="true">🔮</span>
+          <h3>The Sacred Quiz</h3>
+          <p>Eight questions stand between you and learning which donut your soul has always been.</p>
+          <span class="go">Reveal my true self →</span>
+        </a>
+        <a class="card rabbit-hole" href="codex.html" data-drool="3">
+          <span class="emoji" aria-hidden="true">📚</span>
+          <h3>The Donut Codex</h3>
+          <p>A scholarly catalog of known donut species, their Latin names, and their tasting notes.</p>
+          <span class="go">Study the specimens →</span>
+        </a>
+        <a class="card rabbit-hole" href="scripture.html" data-drool="3">
+          <span class="emoji" aria-hidden="true">⛪</span>
+          <h3>Holy Scripture</h3>
+          <p>The Manifesto and the Ten Commandments of the Donut, as delivered by Brother Glazed.</p>
+          <span class="go">Receive the word →</span>
+        </a>
+        <a class="card rabbit-hole" href="hall-of-glaze.html" data-drool="3">
+          <span class="emoji" aria-hidden="true">🏆</span>
+          <h3>Hall of Glaze</h3>
+          <p>The legendary donuts and drool champions enshrined for all eternity. Are you worthy?</p>
+          <span class="go">Behold the greats →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== Creed ===== -->
+    <section class="section wrap center">
+      <div class="card" style="max-width:680px;margin:0 auto;">
+        <div class="seal" aria-hidden="true">Approved<br>by the<br>Order</div>
+        <h2 style="margin-top:0.6rem;">Our One True Creed</h2>
+        <p class="muted" style="font-size:1.15rem;">
+          We believe in the donut, maker of mornings, glazer of glaze. We believe a hole is not an absence but an invitation. We believe the last one in the box belongs to whoever asks the question, <em>"are you going to eat that?"</em> fastest. Mmm. Amen.
+        </p>
+        <p><a class="btn ghost" href="scripture.html" data-drool="5">Read the full Scripture</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <img class="donut-mark" src="assets/favicon.svg" alt="" aria-hidden="true" />
+    <p style="font-family:var(--font-display);font-size:1.3rem;margin:0.4rem 0;">Mmm… donuts.</p>
+    <p><a href="quiz.html">Quiz</a> · <a href="codex.html">Codex</a> · <a href="scripture.html">Scripture</a> · <a href="hall-of-glaze.html">Hall of Glaze</a></p>
+    <p class="fine">The Holy Order of the Donut is a work of loving parody and contains zero actual donuts, which is the only flaw in its design. Not responsible for keyboard drool damage, sudden bakery visits, or existential cravings. No real deities, dieticians, or donuts were harmed.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — This Donut Has Been Eaten 🍩</title>
+  <meta name="description" content="The page you sought has been consumed. Such is the way of all donuts." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:ital,wght@0,400;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <img class="donut-mark" src="assets/favicon.svg" alt="" aria-hidden="true" />
+        Holy Order of the Donut
+      </a>
+      <div class="nav-links">
+        <a href="quiz.html">Quiz</a>
+        <a href="codex.html">Codex</a>
+        <a href="scripture.html">Scripture</a>
+        <a href="hall-of-glaze.html">Hall of Glaze</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="lost wrap">
+      <h1>404</h1>
+      <svg class="bitten" viewBox="0 0 320 320" role="img" aria-label="A donut with a giant bite taken out of it.">
+        <defs>
+          <clipPath id="bite">
+            <path d="M0 0h320v320H0z M250 90a46 46 0 1 0 0 2z"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#bite)">
+          <circle cx="160" cy="160" r="120" fill="#e6c281"/>
+          <path d="M160 52a108 108 0 0 0-96 156c10-52 50-78 96-78s86 26 96 78A108 108 0 0 0 160 52z" fill="#ff6fb5"/>
+          <circle cx="160" cy="160" r="38" fill="#5a3825"/>
+          <circle cx="160" cy="160" r="38" fill="none" stroke="#3a2417" stroke-width="6"/>
+          <g stroke-width="7" stroke-linecap="round">
+            <line x1="110" y1="100" x2="118" y2="112" stroke="#ffd23f"/>
+            <line x1="160" y1="80"  x2="166" y2="94" stroke="#2ec4b6"/>
+            <line x1="90"  y1="150" x2="102" y2="156" stroke="#9b5de5"/>
+            <line x1="120" y1="208" x2="128" y2="220" stroke="#4cc9f0"/>
+          </g>
+        </g>
+      </svg>
+      <h2>D'oh! This donut has been eaten.</h2>
+      <p class="lede" style="margin-inline:auto;">The page you reached for is gone — devoured, glaze and all. We have our suspicions about who did it, but the box is empty and the evidence is delicious.</p>
+      <p>
+        <a class="btn big" href="index.html" data-drool="5">🍩 Back to the Shrine</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img class="donut-mark" src="assets/favicon.svg" alt="" aria-hidden="true" />
+    <p style="font-family:var(--font-display);font-size:1.3rem;margin:0.4rem 0;">Mmm… nothing. (Someone ate it.)</p>
+    <p><a href="index.html">Home</a> · <a href="quiz.html">Quiz</a> · <a href="codex.html">Codex</a> · <a href="scripture.html">Scripture</a> · <a href="hall-of-glaze.html">Hall of Glaze</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
